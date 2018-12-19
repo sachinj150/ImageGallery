@@ -58,7 +58,17 @@ namespace Marvin.IDP
                 new IdentityResource(
                     "roles",
                     "Your roles(s)",
-                    new List<string>() { "role" })
+                    new List<string>() { "role" }),
+            };
+        }
+
+        //api-related resources (scopes)
+        public static IEnumerable<ApiResource> GetApiResources()
+        {
+            return new List<ApiResource>
+            {
+                new ApiResource("imagegalleryapi", "Image Gallery API",
+                new List<string>() {"role"} )
             };
         }
 
@@ -84,7 +94,8 @@ namespace Marvin.IDP
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.Address,
-                        "roles"
+                        "roles",
+                        "imagegalleryapi"
                     },
                     ClientSecrets =
                     {
