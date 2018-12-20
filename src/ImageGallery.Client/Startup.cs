@@ -67,6 +67,7 @@ namespace ImageGallery.Client
                   options.Scope.Add("address");
                   options.Scope.Add("roles");
                   options.Scope.Add("imagegalleryapi");
+                  options.Scope.Add("offline_access");
                   options.Scope.Add("subscriptionlevel");
                   options.Scope.Add("country");
                   options.SaveTokens = true;

@@ -48,7 +48,9 @@ namespace ImageGallery.API
                 {
                     options.Authority = "https://localhost:44335/";
                     options.ApiName = "imagegalleryapi";
+                    options.ApiSecret = "apisecret";
                 });
+
             // register the DbContext on the container, getting the connection string from
             // appSettings (note: use this during development; in a production environment,
             // it's better to store the connection string in an environment variable)
